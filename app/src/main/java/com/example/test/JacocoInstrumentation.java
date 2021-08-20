@@ -31,7 +31,9 @@ public class JacocoInstrumentation extends Instrumentation implements FinishList
     public void onCreate(Bundle arguments) {
         Log.d(TAG, "onCreate(" + arguments + ")");
         super.onCreate(arguments);
-        DEFAULT_COVERAGE_FILE_PATH = getContext().getFilesDir().getPath().toString() + "/coverage.ec";
+        DEFAULT_COVERAGE_FILE_PATH = getContext().getFilesDir().getPath() + "/coverage.ec";
+        Log.d(TAG,"新建文件："+DEFAULT_COVERAGE_FILE_PATH);
+
         File file = new File(DEFAULT_COVERAGE_FILE_PATH);
         if(!file.exists()){
             try{

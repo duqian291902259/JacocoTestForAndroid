@@ -17,6 +17,6 @@ public class zhuceActivity extends AppCompatActivity {
 
         // Capture the layout's TextView and set the string as its text
         TextView textView = findViewById(R.id.textView2);
-        textView.setText("请您注册 " + message);
+        textView.setText("请您注册2" + message);
     }
 }
